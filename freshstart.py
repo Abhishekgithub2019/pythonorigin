@@ -19,14 +19,15 @@ def function3():
 class myclass():
     def method1(self):
         function1()
-    def method2(self):
-        function2()
-
+class myclass2():
+    def method1(self):
+        function2()    
 
 if __name__=="__main__":
     function1()
     function3()
     s1=myclass()
     s1.method1()
-    s1.method2()
+    s2=myclass2()
+    s2.method1()
     
