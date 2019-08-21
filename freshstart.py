@@ -23,6 +23,10 @@ class myclass2():
     def method1(self):
         function2()    
 
+class myclass3():
+    def method1(self):
+        function3()
+        
 if __name__=="__main__":
     function1()
     function3()
@@ -30,4 +34,6 @@ if __name__=="__main__":
     s1.method1()
     s2=myclass2()
     s2.method1()
+    s3=myclass3()
+    s3.method1()
     
