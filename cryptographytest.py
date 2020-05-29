@@ -1,15 +1,25 @@
 def function1():
-    STR1 = "TATA CONSULTANCY SERVICES"
-    i=0
-    count = 0
-    vowels = {'a', 'e', 'i'}
-    STR2=STR1.lower()
-    while i < len(STR2):
-        if STR2[i] in vowels:
-            count = count + 1
-            i=i+1
-    print(count)
+    STR1 = bytearray ('ABC', encoding = 'UTF-8')
+    STR1[1] = 97
+    print (STR1)
+
+
+class parentclass():
+    def __init__ (self,fname,lname):
+        self.fname = fname
+        self.lname = lname
+    def method1(self):
+        print (self.fname + " " +self.lname) 
+
+class childclass(parentclass):
+    def __init__(self, fname, lname, age):
+        parentclass.__init__(self, fname, lname)
+        self.age = age
+    def method1(self):
+        print (self.fname + self.lname + self.age)
 
 
 if __name__ == "__main__":
     function1()
+    s1=childclass("kanu", "singh","32")
+    s1.method1()
